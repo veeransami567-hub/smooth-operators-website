@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smooth Operators Hair Salon | Dallas, TX</title>
+
+<meta name="description"
+content="Smooth Operators Hair Salon in Dallas, Texas. Professional barber and hair services at 1222 Commerce St.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:#fff;
+font-family:'DM Sans',sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 7%;
+z-index:1000;
+
+background:rgba(8,8,8,.75);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+font-family:'Bebas Neue',sans-serif;
+font-size:28px;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#d6a756;
+}
+
+.nav-links{
+display:flex;
+gap:32px;
+list-style:none;
+font-size:14px;
+font-weight:600;
+}
+
+.nav-links a{
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#d6a756;
+}
+
+.nav-btn{
+padding:12px 20px;
+border:1px solid #d6a756;
+color:#d6a756;
+border-radius:30px;
+font-weight:700;
+font-size:13px;
+transition:.3s;
+}
+
+.nav-btn:hover{
+background:#d6a756;
+color:#111;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+position:relative;
+padding:120px 7% 80px;
+
+background:
+linear-gradient(90deg,
+rgba(0,0,0,.95) 0%,
+rgba(0,0,0,.78) 45%,
+rgba(0,0,0,.35) 100%),
+url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=2000&q=90");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+.small-title{
+color:#d6a756;
+font-size:13px;
+font-weight:700;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(70px,11vw,145px);
+line-height:.85;
+letter-spacing:2px;
+}
+
+.hero h1 span{
+color:#d6a756;
+}
+
+.hero-sub{
+font-family:'Playfair Display',serif;
+font-style:italic;
+font-size:22px;
+margin-top:25px;
+color:#ddd;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top:35px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 27px;
+border-radius:3px;
+font-weight:700;
+font-size:14px;
+transition:.3s;
+}
+
+.btn-gold{
+background:#d6a756;
+color:#111;
+}
+
+.btn-gold:hover{
+background:#f0c878;
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:1px solid rgba(255,255,255,.5);
+}
+
+.btn-outline:hover{
+border-color:#d6a756;
+color:#d6a756;
+}
+
+.hero-info{
+position:absolute;
+bottom:35px;
+right:7%;
+display:flex;
+gap:35px;
+font-size:12px;
+color:#ccc;
+}
+
+.hero-info strong{
+display:block;
+color:#fff;
+margin-bottom:5px;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+padding:110px 7%;
+}
+
+.section-label{
+color:#d6a756;
+font-size:12px;
+font-weight:bold;
+letter-spacing:4px;
+text-transform:uppercase;
+margin-bottom:15px;
+}
+
+.section-title{
+font-family:'Bebas Neue',sans-serif;
+font-size:70px;
+line-height:.9;
+}
+
+.section-title span{
+color:#d6a756;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+background:#111;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+align-items:center;
+}
+
+.about-image{
+height:550px;
+background:
+url("https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=90")
+center/cover;
+}
+
+.about-text p{
+color:#aaa;
+line-height:1.9;
+margin-top:25px;
+font-size:16px;
+}
+
+.signature{
+font-family:'Playfair Display',serif;
+font-style:italic;
+font-size:28px;
+color:#d6a756;
+margin-top:30px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+background:#0b0b0b;
+}
+
+.services-header{
+display:flex;
+justify-content:space-between;
+align-items:end;
+margin-bottom:50px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+border-top:1px solid #292929;
+}
+
+.service{
+padding:40px 25px;
+border-right:1px solid #292929;
+border-bottom:1px solid #292929;
+transition:.4s;
+}
+
+.service:hover{
+background:#151515;
+}
+
+.service-number{
+color:#d6a756;
+font-family:'Bebas Neue',sans-serif;
+font-size:20px;
+}
+
+.service h3{
+font-family:'Bebas Neue',sans-serif;
+font-size:32px;
+letter-spacing:1px;
+margin:20px 0 10px;
+}
+
+.service p{
+color:#888;
+font-size:14px;
+line-height:1.7;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience{
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=90")
+center/cover fixed;
+
+text-align:center;
+}
+
+.experience h2{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(55px,8vw,100px);
+}
+
+.experience p{
+max-width:600px;
+margin:20px auto 35px;
+color:#ddd;
+line-height:1.8;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:#111;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+}
+
+.contact-info{
+margin-top:35px;
+}
+
+.contact-item{
+padding:20px 0;
+border-bottom:1px solid #292929;
+}
+
+.contact-item small{
+color:#d6a756;
+text-transform:uppercase;
+letter-spacing:2px;
+font-size:10px;
+}
+
+.contact-item p{
+margin-top:7px;
+color:#ddd;
+}
+
+.map{
+min-height:420px;
+background:#1a1a1a;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+border:1px solid #292929;
+}
+
+.map-icon{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.map a{
+color:#d6a756;
+font-weight:bold;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+padding:45px 7%;
+background:#050505;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid #222;
+}
+
+.footer-logo{
+font-family:'Bebas Neue',sans-serif;
+font-size:28px;
+letter-spacing:2px;
+}
+
+.footer-logo span{
+color:#d6a756;
+}
+
+footer p{
+font-size:12px;
+color:#777;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:800px){
+
+.navbar{
+padding:0 5%;
+}
+
+.nav-links{
+display:none;
+}
+
+.nav-btn{
+padding:10px 15px;
+}
+
+.hero{
+padding:120px 5% 70px;
+background-position:65% center;
+}
+
+.hero h1{
+font-size:78px;
+}
+
+.hero-sub{
+font-size:18px;
+}
+
+.hero-info{
+position:static;
+margin-top:50px;
+flex-wrap:wrap;
+}
+
+section{
+padding:80px 5%;
+}
+
+.about-grid,
+.contact-grid{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.about-image{
+height:400px;
+}
+
+.services-header{
+display:block;
+}
+
+.services-grid{
+grid-template-columns:1fr;
+}
+
+.service{
+border-right:0;
+}
+
+.section-title{
+font-size:58px;
+}
+
+.experience{
+background-attachment:scroll;
+}
+
+footer{
+display:block;
+text-align:center;
+}
+
+footer p{
+margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav class="navbar">
+
+<a href="#" class="logo">
+SMOOTH <span>OPERATORS</span>
+</a>
+
+<ul class="nav-links">
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#services">SERVICES</a></li>
+<li><a href="#contact">LOCATION</a></li>
+</ul>
+
+<a href="tel:+12147607466" class="nav-btn">
+CALL NOW
+</a>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="small-title">
+Dallas • Texas
+</div>
+
+<h1>
+SMOOTH<br>
+<span>OPERATORS</span>
+</h1>
+
+<div class="hero-sub">
+Hair • Barber • Style
+</div>
+
+<div class="hero-buttons">
+
+<a href="tel:+12147607466" class="btn btn-gold">
+BOOK BY PHONE
+</a>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=1222+Commerce+St,+Dallas,+TX+75202"
+target="_blank"
+class="btn btn-outline">
+GET DIRECTIONS
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-info">
+
+<div>
+<strong>ADDRESS</strong>
+1222 Commerce St
+</div>
+
+<div>
+<strong>PHONE</strong>
+(214) 760-7466
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-grid">
+
+<div class="about-image"></div>
+
+<div class="about-text">
+
+<div class="section-label">
+The Operators
+</div>
+
+<h2 class="section-title">
+CUT<br>
+WITH <span>CHARACTER.</span>
+</h2>
+
+<p>
+Welcome to Smooth Operators Hair Salon — where
+classic barbering meets modern style.
+
+Our goal is simple: sharp cuts, clean finishes,
+and an experience that keeps you coming back.
+</p>
+
+<p>
+Located in the heart of Dallas at 1222 Commerce St,
+we bring confidence and personality to every style.
+</p>
+
+<div class="signature">
+Smooth. Sharp. Confident.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="services-header">
+
+<div>
+
+<div class="section-label">
+What We Do
+</div>
+
+<h2 class="section-title">
+OUR <span>SERVICES</span>
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="services-grid">
+
+
+<div class="service">
+
+<div class="service-number">01</div>
+
+<h3>Classic Haircut</h3>
+
+<p>
+Clean, timeless cuts tailored to your
+face shape and personal style.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02</div>
+
+<h3>Fade & Taper</h3>
+
+<p>
+Precise fades and tapers with a smooth,
+clean finish.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Beard Grooming</h3>
+
+<p>
+Sharp beard shaping and detailing for
+a polished look.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">04</div>
+
+<h3>Hair Styling</h3>
+
+<p>
+Professional styling for everyday looks
+and special occasions.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">05</div>
+
+<h3>Kids Cuts</h3>
+
+<p>
+Fresh, comfortable and stylish cuts
+for the next generation.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">06</div>
+
+<h3>Custom Style</h3>
+
+<p>
+Tell us what you're looking for and
+we'll create a style around you.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+<div class="section-label">
+Your Next Look
+</div>
+
+<h2>
+LOOK GOOD.<br>
+FEEL <span>SMOOTH.</span>
+</h2>
+
+<p>
+Ready for your next cut?
+Give Smooth Operators a call and
+let's get you looking your best.
+</p>
+
+<a href="tel:+12147607466" class="btn btn-gold">
+(214) 760-7466
+</a>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-grid">
+
+
+<div>
+
+<div class="section-label">
+Find Us
+</div>
+
+<h2 class="section-title">
+COME<br>
+<span>THROUGH.</span>
+</h2>
+
+
+<div class="contact-info">
+
+<div class="contact-item">
+
+<small>Location</small>
+
+<p>
+1222 Commerce St<br>
+Dallas, TX 75202
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>Phone</small>
+
+<p>
+<a href="tel:+12147607466">
+(214) 760-7466
+</a>
+</p>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>Business</small>
+
+<p>
+Smooth Operators Hair Salon
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="map">
+
+<div>
+
+<div class="map-icon">📍</div>
+
+<h3>SMOOTH OPERATORS</h3>
+
+<p>
+1222 Commerce St<br>
+Dallas, TX 75202
+</p>
+
+<br>
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=1222+Commerce+St,+Dallas,+TX+75202"
+target="_blank">
+
+OPEN IN GOOGLE MAPS →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+SMOOTH <span>OPERATORS</span>
+</div>
+
+<p>
+© 2026 Smooth Operators Hair Salon • Dallas, Texas
+</p>
+
+</footer>
+
+
+</body>
+</html>
